@@ -1,0 +1,38 @@
+going through logic of HTML setup
+
+1. <div> elements
+
+- 9 diff keys on the drum kit => each one needs its own container element
+
+2. class="key"
+
+- .key is a shared CSS class that applies common styles to all the drum keys
+- ensures you don't have to repeat the same css code for each key element
+
+3. data-key="..." attributes
+
+- when user presses a key on the keyboard, you want JavaScript to easily match that event to the corresponding div by checking the data-key attribute
+- allows you to add extra info to elements without mixing it up with classes or IDs
+
+4. <span class="sound"> inside each key
+
+- contains name of the sound that the key produces (ex. "clap", "hihat")
+- span lets you apply CSS styles specifically to that text without affecting the whole key container
+- <span> is inline meaning it doesn't create a new block or line break, it only targets the specific text inline 
+- allows you to manipulate a small piece of text or inline content
+
+5. <kbd> tag
+
+- shows the actual keyboard key to press
+- way of communicating "press this key" to users
+- styled to stand out as the main interactive element
+
+Design Pattern (element:purpose)
+
+div.key : visual and interactive key container
+
+data-key : code linking keyboard event to key
+
+<kbd> : displays the key letter
+
+<span class="sound> : displays the sound name 
